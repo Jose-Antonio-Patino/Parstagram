@@ -135,6 +135,11 @@
                         <viewLayoutGuide key="safeArea" id="79v-H9-BBz"/>
                     </view>
                     <navigationItem key="navigationItem" id="BjQ-5P-Ssh">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="iBF-kv-IIb">
+                            <connections>
+                                <action selector="onLogOut:" destination="G4J-6o-7KF" id="6JF-Gg-y0L"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="Nb0-Cd-TxF">
                             <connections>
                                 <segue destination="Uas-BE-EiS" kind="presentation" id="AoX-rV-Z6U"/>
@@ -147,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLa-l1-xWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="125.4872563718141"/>
+            <point key="canvasLocation" x="1609" y="125"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tZh-5Q-wRf">
@@ -212,7 +217,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ekC-mi-Gl8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="awF-g9-Yu5" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="awF-g9-Yu5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ng2-hT-Alj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
