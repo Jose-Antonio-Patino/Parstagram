@@ -96,13 +96,13 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antonio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODs-g3-XmS">
-                                                    <rect key="frame" x="8" y="383" width="59" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="8" y="383" width="62.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wow, I love photos!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-dI-OJv">
-                                                    <rect key="frame" x="75" y="383" width="147.5" height="20.5"/>
+                                                    <rect key="frame" x="78.5" y="383" width="147.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -120,6 +120,41 @@
                                             <outlet property="captionLabel" destination="xLT-dI-OJv" id="9Vy-Xy-0l7"/>
                                             <outlet property="photoView" destination="okz-Ob-BN1" id="rR9-61-6UF"/>
                                             <outlet property="usernameLabel" destination="ODs-g3-XmS" id="2Ov-8b-bjl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="43" id="qha-US-rSk" customClass="CommentCell" customModule="Parstagram" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="448" width="375" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qha-US-rSk" id="GYG-vA-kTp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ra-V8-PSG">
+                                                    <rect key="frame" x="16" y="8" width="43.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siA-FZ-4zi">
+                                                    <rect key="frame" x="67.5" y="8" width="42" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="siA-FZ-4zi" firstAttribute="leading" secondItem="1Ra-V8-PSG" secondAttribute="trailing" constant="8" id="7FC-zb-HzL"/>
+                                                <constraint firstItem="1Ra-V8-PSG" firstAttribute="top" secondItem="GYG-vA-kTp" secondAttribute="top" constant="8" id="LCM-ua-i08"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="siA-FZ-4zi" secondAttribute="bottom" constant="8" id="Njw-vj-iRe"/>
+                                                <constraint firstItem="siA-FZ-4zi" firstAttribute="top" secondItem="GYG-vA-kTp" secondAttribute="top" constant="8" id="TnT-HY-Sns"/>
+                                                <constraint firstItem="1Ra-V8-PSG" firstAttribute="leading" secondItem="GYG-vA-kTp" secondAttribute="leading" constant="16" id="bqX-c3-M3I"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="siA-FZ-4zi" secondAttribute="trailing" constant="8" id="cP7-L8-cxZ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1Ra-V8-PSG" secondAttribute="bottom" constant="8" id="slx-b0-Bst"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="siA-FZ-4zi" id="Xe1-iW-tWn"/>
+                                            <outlet property="nameLabel" destination="1Ra-V8-PSG" id="wDz-8G-IZk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLa-l1-xWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1609" y="125"/>
+            <point key="canvasLocation" x="1608.8" y="124.58770614692655"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="tZh-5Q-wRf">
